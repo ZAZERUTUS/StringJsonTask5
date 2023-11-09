@@ -4,18 +4,16 @@ import org.example.pojo.Order;
 import org.example.pojo.Product;
 
 import java.lang.reflect.Field;
+import java.sql.Timestamp;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
 
 public class CustomParser {
 
     public static String serialize(Object obj) {
-        Map<String, Object> map = new HashMap<>();
+        Map<String, Object> map = new LinkedHashMap<>();
         Class<?> clazz = obj.getClass();
         Field[] fields = clazz.getDeclaredFields();
 
@@ -54,6 +52,7 @@ public class CustomParser {
                 value instanceof LocalDateTime ||
                 value instanceof OffsetDateTime ||
                 value instanceof LocalDate ||
+                value instanceof Timestamp ||
                 value instanceof UUID) {
             return "\"" + value + "\"";
         } else if (value instanceof Integer ||

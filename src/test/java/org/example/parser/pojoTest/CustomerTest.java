@@ -7,7 +7,9 @@ import org.example.pojo.Customer;
 import org.example.pojo.Order;
 import org.example.pojo.Product;
 
+import java.sql.Timestamp;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -36,11 +38,11 @@ public class CustomerTest {
     private static List<Order> getDefaultOrders() {
         Order order1 = new Order(UUID.fromString("a3b125bb-0889-4fcb-8e32-e2b3c42caebf"),
                 getDefaultProducts(),
-                OffsetDateTime.parse("2023-11-08T23:48:53.223505600+03:00"));
+                Timestamp.valueOf(LocalDateTime.of(2023, 11, 9, 9, 8)));
 
         Order order2 = new Order(UUID.fromString("7572a3a6-e460-4629-a45e-e14150eebce7"),
                 getDefaultProducts(),
-                OffsetDateTime.parse("2023-11-08T23:48:00.395060100+03:00"));
+                Timestamp.valueOf(LocalDateTime.of(2023, 11, 9, 9, 9)));
         return Arrays.asList(order1, order2);
     }
 

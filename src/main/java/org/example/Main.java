@@ -18,11 +18,11 @@ public class Main {
         Product pr2 = new Product(UUID.randomUUID(), "Prod2", 2.33);
         Product pr3 = new Product(UUID.randomUUID(), "Prod3", 3.44);
 
-        Order order1 = new Order(UUID.randomUUID(), Arrays.asList(pr1, pr2, pr3), OffsetDateTime.now());
-        Order order2 = new Order(UUID.randomUUID(), Arrays.asList(pr3, pr2, pr1), OffsetDateTime.now());
-
-        Customer customer = new Customer(UUID.randomUUID(), "FirstName", "LastName", LocalDate.now(), Arrays.asList(order1, order2));
-
-        System.out.println(CustomParser.serialize(customer));
+//        Order order1 = new Order(UUID.randomUUID(), Arrays.asList(pr1, pr2, pr3), OffsetDateTime.now());
+//        Order order2 = new Order(UUID.randomUUID(), Arrays.asList(pr3, pr2, pr1), OffsetDateTime.now());
+//
+//        Customer customer = new Customer(UUID.randomUUID(), "FirstName", "LastName", LocalDate.now(), Arrays.asList(order1, order2));
+//
+//        System.out.println(CustomParser.serialize(customer));
     }
 }
