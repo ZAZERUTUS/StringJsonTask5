@@ -47,7 +47,7 @@ public class CustomerTest {
     }
 
     private static List<Product> getDefaultProducts() {
-        Product pr1 = new Product(UUID.fromString("ab41ede9-a75a-4ebe-b6d0-f0363ee0aa1c"), "Prod1", 1.22);
+        Product pr1 = new Product(UUID.fromString("ab41ede9-a75a-4ebe-b6d0-f0363ee0aa1c"), "Prod1", null);
         Product pr2 = new Product(UUID.fromString("71934ae7-3cf3-48db-aeaa-8764ecae4c3b"), "Prod2", 2.33);
         Product pr3 = new Product(UUID.fromString("308db6bc-2a07-42ab-83a1-dc6f4c7ded52"), "Prod3", 3.44);
         return Arrays.asList(pr1, pr2, pr3);
