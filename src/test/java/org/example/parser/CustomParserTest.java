@@ -52,7 +52,7 @@ class CustomParserTest {
     }
 
     @Test
-    void deserializeTestClass1() {
+    void deserializeTestClassByGson() {
         //Given
         Elem1 expected = getElem1();
         GsonBuilder gsonBuilder = new GsonBuilder();
