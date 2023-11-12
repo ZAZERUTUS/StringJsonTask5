@@ -163,8 +163,6 @@ public class CustomParser {
                 field.set(instance, LocalDate.parse(fieldValue.toString()));
             } else if (fieldType == Timestamp.class) {
                 field.set(instance, Timestamp.valueOf(fieldValue.toString()));
-//            } else if (fieldType == Timestamp.class) {
-//                field.set(instance, Timestamp.valueOf(fieldValue.toString().replace(" ", "T")));
             } else if (fieldType == List.class) {
                 field.set(instance, (List) fieldValue);
             } else {
@@ -174,16 +172,6 @@ public class CustomParser {
             e.printStackTrace();
         }
     }
-
-//    private static String getJsonForClass(Class<?> clazz, String json) {
-//        String regexp = getRegexpForClassFields(clazz);
-//        Pattern pattern = Pattern.compile(regexp);
-//        Matcher matcher = pattern.matcher(json);
-//        if (matcher.find()) {
-//            return matcher.group();
-//        }
-//        throw new IllegalArgumentException("Incorrect json string for match by - " + regexp);
-//    }
 
     private static String getRegexpForClassFields(Class<?> clazz) {
         StringBuilder builder = new StringBuilder("\\{");
